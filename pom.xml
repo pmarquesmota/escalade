@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pt.marquesmota</groupId>
-	<artifactId>escalade3</artifactId>
+	<artifactId>escalade</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>escalade3</name>
+	<name>escalade</name>
 	<description>Projet Escalade</description>
 	<packaging>war</packaging>
 
