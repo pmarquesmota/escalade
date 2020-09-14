@@ -7,11 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import org.hibernate.annotations.Entity;
-import org.hibernate.annotations.Generated;
-import org.springframework.data.annotation.Id;
-
+// @Entity est obsolète
+// https://stackoverflow.com/questions/7985970/org-hibernate-annotations-entity-deprecated-in-hibernate-4
 @Entity
 public class Commentaire implements Serializable {
 	@Id

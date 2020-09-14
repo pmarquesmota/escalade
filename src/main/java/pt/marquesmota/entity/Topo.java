@@ -1,11 +1,14 @@
 package pt.marquesmota.entity;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Topo implements Serializable {
@@ -17,6 +20,10 @@ public class Topo implements Serializable {
 	private String lieu_parution;
 	private Date date_parution;
 	private Boolean pret;
+	
+	@OneToMany(mappedBy = "site_id", fetch = FetchType.LAZY)
+	Collection<Site> sites;
+	
 	public Topo(String nom, String description, String lieu_parution, Date date_parution, Boolean pret) {
 		super();
 		this.nom = nom;
