@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import pt.marquesmota.dao.TopoRepository;
 import pt.marquesmota.entity.Topo;
+import pt.marquesmota.metier.TopoMetier;
 
 @EnableAutoConfiguration
 @ComponentScan
@@ -17,13 +18,13 @@ import pt.marquesmota.entity.Topo;
 public class EscaladeApplication {
 	
 	@Autowired
-	private TopoRepository topoRepository;
+	private TopoMetier topoMetier;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(EscaladeApplication.class, args);
 	}
 	
 	public void run(String... args) throws Exception {
-		topoRepository.save( new Topo("test", "Topo de test", "chez moi", new Date(), true));
+		topoMetier.insererTopo("test", "Topo de test", "chez moi", new Date(), true);
 	}
 }
